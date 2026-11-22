@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  threads:
+    virtual:
+      enabled: true
+
+anthropic:
+  api-key: ${ANTHROPIC_API_KEY:}
+  model: claude-sonnet-5-5
+  max-tokens: 2048
+  system-prompt: "You are a helpful assistant."
+
+chat:
+  max-message-chars: 8000
+  context-token-budget: 24000
+
+app:
+  cors-origin: http://localhost:5173

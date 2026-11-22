@@ -1,0 +1,2 @@
+export const MAX_MESSAGE_CHARS = 8000
+export const SCROLL_PIN_THRESHOLD_PX = 80
