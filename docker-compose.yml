@@ -5,10 +5,10 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_DB: ${DB_NAME:-chatapp}
-      POSTGRES_USER: ${DB_USER:-chatapp}
+      POSTGRES_USER: ${DB_USER:-root}
       POSTGRES_PASSWORD: ${DB_PASSWORD:?set DB_PASSWORD in .env}
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - chatapp-pgdata:/var/lib/postgresql
 
